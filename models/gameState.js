@@ -6,7 +6,7 @@ const rooms = new Map();
 // Load DSA tasks from JSON file
 let dsaLevelTasks = [];
 try {
-    const rawData = fs.readFileSync(path.join(__dirname, '../../gameState.json'), 'utf8');
+    const rawData = fs.readFileSync(path.join(__dirname, '../gameState.json'), 'utf8');
     dsaLevelTasks = JSON.parse(rawData);
 } catch (error) {
     console.error('Error loading tasks from gameState.json:', error);

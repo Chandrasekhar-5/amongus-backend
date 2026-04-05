@@ -18,6 +18,10 @@ if (!fs.existsSync(usersFilePath)) {
     fs.writeFileSync(usersFilePath, JSON.stringify({}));
 }
 
+app.get("/", (req, res) => {
+  res.send("Backend is running 🚀");
+});
+
 app.post('/api/auth/register', (req, res) => {
     const { username, password } = req.body;
     if (!username || !password) return res.status(400).json({ error: "Username and password required" });
